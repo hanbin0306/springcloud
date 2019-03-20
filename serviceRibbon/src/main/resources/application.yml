@@ -1,0 +1,16 @@
+server:
+  port: 3001
+spring:
+  application:
+    name: eureka-ribbon-client
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

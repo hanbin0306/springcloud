@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: eureka-config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://gitee.com/qianxunclub/spring-boot-config-repo
+          searchPaths: /**
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1000/eureka/
+
+

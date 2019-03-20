@@ -1,0 +1,22 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: eureka-config-client
+  cloud:
+    config:
+      label: master
+      profile: prod
+      uri: http://localhost:8888/
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1000/eureka/
+
+management:
+  security:
+    enabled: false
+
+
